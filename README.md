@@ -20,4 +20,8 @@
 
 # `测试环境相关搭建`
 
--
+- 免费的服务器和域名
+
+  使用- [Cloud Studio](https://studio.dev.tencent.com/)
+
+- 微信公众号(这个只有自己解决)
