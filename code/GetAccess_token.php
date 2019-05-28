@@ -27,11 +27,16 @@ class GetAccess_token{
 
       $url=substr($url,0,strlen($url)-1);
 
-      echo($url);die();
+      //echo($url);die();
       // 1. 初始化
         $ch = curl_init();
 
+
+
+
         // 2. 设置选项，包括URL
+		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false); // 跳过证书验证（https）的网站无法跳过，会报错
+		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // 跳过证书验证
         curl_setopt($ch,CURLOPT_URL,$url);
         //curl_setopt($ch, CURLOPT_HTTPHEADER,$post_header);
         curl_setopt($ch,CURLOPT_HEADER,0);
@@ -41,6 +46,8 @@ class GetAccess_token{
         // 4. 释放curl句柄
         curl_close($ch);
 
+
+		//echo ($output);die();
         //处理结果
         if($output === FALSE ){
             echo "CURL Error:".curl_error($ch);
