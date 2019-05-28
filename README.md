@@ -24,4 +24,4 @@
 
   使用- [Cloud Studio](https://studio.dev.tencent.com/)
 
-- 微信公众号(这个只有自己解决)
+- 微信公众号([官方测试环境](https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login))
